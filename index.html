@@ -1,49 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="/assets/favicon.1647533642.ico"/>
-    <link rel="stylesheet" href="styles/styles.css">
-    <title>Codificador</title>
-    
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mike Almeida</title>
+  <meta name="description" content="Desenvolvedor full stack. Python, TypeScript e Oracle em sistemas internos de uma distribuidora de material elétrico.">
+  <meta property="og:title" content="Mike Almeida, desenvolvedor full stack">
+  <meta property="og:description" content="Do banco Oracle do ERP ao app que roda no coletor do armazém.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mkeacs.github.io/">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/109988238?v=4">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Mono:wght@400;500&family=Public+Sans:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-    <main class="main-container">
-        <header class="header">
-            <img src="assets/logo.png" alt="logo">
-            <h1>Mensagens Codificadas</h1>
-        </header>
+  <a class="skip" href="#conteudo" data-i18n="skip">Pular para o conteúdo</a>
 
-        <div class="container-input">
-            <div class="input">
-                <textarea name="" id="input-text" placeholder="Digite o seu texto"></textarea>
-                <p>ATENÇÃO: Apenas letras minúsculas e sem acento!</p>
-            </div>
-            <div id="output">
-                <img src="assets/imgcod.png" alt="logo">
-                <h2>Nenhuma mensagem encontrada!</h2>
-                <span>Digite um texto que você deseja criptografar ou descriptografar.</span>
+  <header class="top">
+    <a class="brand" href="#" aria-label="Mike Almeida, início" data-i18n-attr="aria-label:brandAria">MA</a>
+    <nav aria-label="Seções" data-i18n-attr="aria-label:navLabel">
+      <a href="#projetos" data-i18n="navProjects">Projetos</a>
+      <a href="#ferramentas" data-i18n="navStack">Ferramentas</a>
+      <a href="#contato" data-i18n="navContact">Contato</a>
+    </nav>
+    <button class="lang" type="button" id="lang" aria-label="Read in English">EN</button>
+  </header>
 
-            </div>
-
+  <main id="conteudo">
+    <section class="hero">
+      <figure class="label" aria-label="Etiqueta com nome, cargo, empresa e código de barras de Mike Almeida" data-i18n-attr="aria-label:labelAria">
+        <div class="label-head">
+          <span data-i18n="labelKind">Etiqueta de endereço</span>
+          <span>BA · BR</span>
         </div>
-
-        <div class="buttons">
-            <div class="container-buttons">
-                <button onclick="cript()" class="btn-cript">Criptografar</button>
-                <button onclick="decript()" class="btn-decript">Descriptografar</button>
-
-            </div>
-
+        <h1 class="label-name">Mike<br>Almeida</h1>
+        <dl class="label-fields">
+          <div><dt data-i18n="fRole">Cargo</dt><dd data-i18n="vRole">Desenvolvedor full stack</dd></div>
+          <div><dt data-i18n="fCompany">Empresa</dt><dd>Elétrica Bahiana</dd></div>
+          <div><dt>Stack</dt><dd>Python · TypeScript · Oracle</dd></div>
+        </dl>
+        <div class="barcode-wrap">
+          <svg class="barcode" id="barcode" role="img" aria-label="Código de barras Code 39: MKEACS" preserveAspectRatio="none"></svg>
+          <span class="laser" aria-hidden="true"></span>
         </div>
+        <figcaption class="label-foot">
+          <span>*MKEACS*</span>
+          <span>github.com/mkeacs</span>
+        </figcaption>
+      </figure>
 
-    </main>
-    
+      <div class="hero-text">
+        <p class="lede" data-i18n="lede">Construo os sistemas internos de uma distribuidora de material elétrico: do banco Oracle do ERP até o app que roda no coletor do armazém.</p>
+        <p data-i18n="intro">Trabalho na Elétrica Bahiana, que tem lojas em Salvador, Lauro de Freitas e Aracaju. Faço a ponte entre o que vendas, logística e RH precisam e o que o ERP permite, com Python, TypeScript e SQL.</p>
+        <div class="cta">
+          <a class="btn btn-primary" href="https://www.linkedin.com/in/mike-almeida/" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/mkeacs" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="projetos" class="block">
+      <header class="block-head">
+        <h2 data-i18n="projTitle">Projetos na Elétrica Bahiana</h2>
+        <p data-i18n="projNote">Código privado da empresa, feito em equipe. Aqui fica o que cada sistema resolve.</p>
+      </header>
+
+      <div class="grid">
+        <article class="card">
+          <h3 data-i18n="p1t">Portal interno e API</h3>
+          <p data-i18n="p1d">Um só endereço onde vendas, logística, compras e RH abrem as ferramentas do dia a dia. Front-end em React com carregamento por tela, API em FastAPI ligada ao Oracle do ERP e um worker separado para as tarefas longas. As permissões por setor e por pessoa são geridas pela própria TI, sem deploy.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>Vite</li><li>Tailwind</li><li>FastAPI</li><li>Oracle</li></ul>
+        </article>
+
+        <article class="card">
+          <h3>CableControl</h3>
+          <p data-i18n="p2d">Estoque de cabos elétricos por endereço. Cada bobina e cada ponta tem torre e posição. O corte para o pedido é feito em um passo, e a sobra herda o endereço da peça de origem. As entradas chegam pela nota fiscal, e todo movimento fica no histórico.</p>
+          <ul class="tags"><li>Python</li><li>FastAPI</li><li>PL/SQL</li><li>React</li></ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="p3t">Benefícios e RH</h3>
+          <p data-i18n="p3d">Vale-transporte e vale-alimentação calculados a partir das batidas de ponto, seguindo as regras da casa: férias, atestado, estagiário, admissão no meio do mês. Sincroniza com a plataforma de ponto todo dia e gera o arquivo que a folha de pagamento importa, comissões incluídas.</p>
+          <ul class="tags"><li>Python</li><li>APScheduler</li><li>React</li><li>Recharts</li></ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="p4t">Telas do ERP no navegador</h3>
+          <p data-i18n="p4d">Rotinas do Winthor (TOTVS) refeitas na web para quem não precisa de uma licença do ERP: simulação de preço, impressão de pedido com QR code e código de barras, extrato de produto, priorização de expedição. A consulta segue o SQL que o próprio ERP executa, para o resultado bater com o original.</p>
+          <ul class="tags"><li>Oracle SQL</li><li>FastAPI</li><li>React</li></ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="p5t">RF, app para coletores</h3>
+          <p data-i18n="p5d">App Android para os coletores de código de barras do armazém. Separar, conferir e receber mercadoria bipando item a item, gravando no ERP pela API do portal.</p>
+          <ul class="tags"><li>React Native</li><li>Expo</li><li>TypeScript</li></ul>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="p6t">IA no dia a dia</h3>
+          <p data-i18n="p6d">Assistente de orçamentos por chat para a equipe de vendas, feito com LangGraph e a API do Claude. Servidores MCP dão aos assistentes de IA da TI acesso ao banco do ERP, somente leitura, e ao Pipefy.</p>
+          <ul class="tags"><li>LangGraph</li><li>Claude API</li><li>MCP</li><li>Python</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="block">
+      <header class="block-head">
+        <h2 data-i18n="otherTitle">Outros projetos</h2>
+      </header>
+      <ul class="list">
+        <li>
+          <h3 data-i18n="o1t">Site para artista visual</h3>
+          <p data-i18n="o1d">Galeria, newsletter e carrossel do Instagram com renovação automática do token de acesso.</p>
+          <ul class="tags"><li>React</li><li>shadcn/ui</li><li>Redis</li><li>Vercel</li></ul>
+        </li>
+        <li>
+          <h3 data-i18n="o2t">Integração SGP → Omie</h3>
+          <p data-i18n="o2d">Leva as contas a receber de um sistema de gestão de provedor de internet para o ERP Omie, por consulta incremental e sem duplicar lançamentos.</p>
+          <ul class="tags"><li>Python</li><li>SQLite</li><li>REST</li></ul>
+        </li>
+        <li>
+          <h3 data-i18n="o3t">Cadastro de eletricistas</h3>
+          <p data-i18n="o3d">Inscrição de eletricistas parceiros, com área do usuário e painel administrativo.</p>
+          <ul class="tags"><li>React</li><li>TypeScript</li><li>shadcn/ui</li></ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="ferramentas" class="block">
+      <header class="block-head">
+        <h2 data-i18n="stackTitle">Ferramentas</h2>
+        <p data-i18n="stackNote">O que uso em produção hoje.</p>
+      </header>
+      <dl class="stack">
+        <div><dt data-i18n="s1">Linguagens</dt><dd>Python, TypeScript, JavaScript, SQL e PL/SQL, Bash</dd></div>
+        <div><dt>Back-end</dt><dd>FastAPI, Pydantic, APScheduler, httpx, pytest</dd></div>
+        <div><dt data-i18n="s3">Front-end e mobile</dt><dd>React, Vite, Tailwind CSS, React Router, React Hook Form, Recharts, Vitest, React Native com Expo</dd></div>
+        <div><dt data-i18n="s4">Dados</dt><dd>Oracle, SQLite, Redis</dd></div>
+        <div><dt data-i18n="s5">Infraestrutura</dt><dd>Debian, systemd, Apache, Docker, GitHub Actions, Vercel</dd></div>
+        <div><dt data-i18n="s6">IA</dt><dd>Claude API, LangGraph, MCP</dd></div>
+      </dl>
+    </section>
+
+    <section id="contato" class="block contact">
+      <h2 data-i18n="contactTitle">Vamos conversar</h2>
+      <p data-i18n="contactText">O jeito mais rápido de falar comigo é pelo LinkedIn.</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="https://www.linkedin.com/in/mike-almeida/" rel="noopener" data-i18n="contactBtn">Mandar mensagem no LinkedIn</a>
+        <a class="btn" href="https://github.com/mkeacs" rel="noopener" data-i18n="githubBtn">Ver o GitHub</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>© 2026 Mike Almeida</span>
+    <span data-i18n="footNote">Feito à mão, sem framework, publicado no GitHub Pages.</span>
+  </footer>
+
+  <script src="assets/main.js"></script>
 </body>
-
-<script src="script.js"></script>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </html>
